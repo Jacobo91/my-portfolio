@@ -59,17 +59,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 1rem;
+    margin-top: 10px;
 }    
 
 .divider{
-    margin-top: 80px;
-    border: 1px solid var(--light-grey);
+    margin-top: 5rem;
 } 
 
-.divider{
-    border: 1px solid var(--light-grey);
+.divider2{
+    margin-bottom: 80px;
 } 
+
+.divider-style{
+    border: 1px solid var(--light-grey);
+}
 
 .img-circles{
     z-index: 100;
@@ -98,7 +101,7 @@ nav{
 .name{
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 li{
@@ -137,10 +140,10 @@ i:hover{
 }
 
     /* main */
-l
+
 main{
-   /* border: 1px solid var(--green);*/
-    margin: 0 1rem ;  
+    /*border: 1px solid var(--green);*/
+    margin: 0 1.5rem;  
 }
 
 @media only screen and (min-width: 1024px){/* desktop */
@@ -179,7 +182,7 @@ h1{
 }
 
 h1::before{
-    content: "Nice to meet you! \A I'm Jacobo Velasquez.";
+    content: "Nice to meet you! \A I'm Jacobo Velásquez.";
     white-space: pre-line;
 }
 
@@ -204,6 +207,7 @@ h1::after{
 
 .contact-1{
     transition: all 350ms ease-in-out;
+    letter-spacing: 2px;
 }
 .contact-1:hover{
     color: var(--green);
@@ -372,6 +376,179 @@ h1::after{
     width: 1px;
 }
 
+/* projects */
+
+.projects{
+    margin-bottom: 5rem;
+}
+
+.projects-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.projects-gallery{
+    margin-top: 2rem;
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 1.4rem;
+}
+
+.project{
+    /*border: 1px dashed red;*/
+    width: auto;
+    height: auto;
+}
+
+h3{
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+}
+
+.project-description{
+    word-spacing: 0.5rem;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+
+.project-link{
+    margin-inline-end: 0.5rem;
+}
+
+.project-img-wrapper{
+    width: 100%;
+}
+
+.project-img{
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 600px){
+    
+    .projects-gallery{
+        margin-top: 2rem;
+        display: grid;
+        row-gap: 2rem;
+        column-gap: 1.4rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* footer */
+
+.tracking-border{
+    border: 1px dashed red;
+}
+
+footer{
+    background-color: var(--dark-grey);
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.contact-section{
+    padding-top: 2rem;
+}
+
+.contact-header{
+    margin-top: 1rem;
+}
+
+.contact-description{
+    text-align: center;
+    margin: 1.25rem auto;
+    font-size: 0.87rem;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+form{
+    text-transform: uppercase;
+    display: grid;
+}
+
+input{
+    color: var(--white);
+    padding: 5px;
+    background-color: transparent;
+    width: 100%;
+    margin: 1rem 0;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+}
+
+textarea{
+    color: var(--white);
+    padding: 5px;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 1rem;
+}
+
+input[type="text"]:focus{
+    border-bottom-color: var(--green);
+    outline: none;
+}
 
 
+input[type="email"]:focus{
+    border-bottom-color: var(--green);
+    outline: none;
+}
 
+input[type="submit"]{
+    text-align: right;
+    margin-bottom: 2rem;
+    width: 130px;
+    justify-self: flex-end;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid var(--green);
+}
+
+input[type="submit"]:hover{
+cursor: pointer;
+}
+
+.footer-links{
+    padding: 1rem 0;
+    border-top: 1px solid var(--light-grey);
+}
+
+@media only screen and (min-width: 600px){
+    .contact-section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.5rem ;
+    }
+
+    .contact-header{
+        text-align: left;
+    }
+
+    .contact-description{
+        text-align: left;
+        margin: 0;
+    }
+
+    textarea{
+        height: 3.7rem;
+    }
+
+    .footer-links{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px){
+    footer{
+        padding: 0 10rem;
+    }
+}
