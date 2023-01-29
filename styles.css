@@ -137,7 +137,7 @@ i:hover{
 }
 
     /* main */
-
+l
 main{
    /* border: 1px solid var(--green);*/
     margin: 0 1rem ;  
@@ -318,15 +318,12 @@ h1::after{
 .tech-logo-wrapper{
     text-align: center;
     text-transform: uppercase;
+    width: 100px;
+    overflow: hidden;
 }
 
 .all-logo-wrapper{
     align-self: flex-end;
-}
-
-.tech-logo-wrapper{
-    width: 100px;
-    overflow: hidden;
 }
 
 .tech-logo{
