@@ -1,0 +1,309 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* color variables */
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(0, 0%, 85%);
+    --dark-grey: hsl(0, 0%, 14%);
+    --green: hsl(153, 71%, 59%);
+    --black: hsl(0, 0%, 8%);
+}
+
+/* fonts */
+
+/* space-grotesk-regular - latin */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-regular.svg') format('svg'); /* Legacy iOS */
+    }
+    /* space-grotesk-700 - latin */
+    @font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-700.eot') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-700.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/space-grotesk-v15-latin/space-grotesk-v15-latin-700.svg') format('svg'); /* Legacy iOS */
+    }
+
+    /* global styles */
+
+.link-btns{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.link-btns::after{
+    content: "";
+    height: 0.12rem;
+    width: 100%;
+    background-color: var(--green);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 1rem;
+}    
+
+.divider{
+    margin-top: 80px;
+    border: 1px solid var(--light-grey);
+} 
+
+.img-circles{
+    z-index: 100;
+    position: absolute;
+    width: 45%;
+}
+
+
+    /* body */
+
+body{
+    font-family: 'Space Grotesk';
+    background-color: var(--black);
+    color: var(--white);
+}
+
+    /* navbar */
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 0;
+}
+
+.name{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin-inline: 1rem;
+}
+
+i{
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+i:hover{
+    color: var(--green);
+}
+
+@media only screen and (min-width: 768px){/* tablet */
+
+    nav{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.25rem 1rem;
+    }
+
+    li{
+        margin-inline-end: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px){/* desktop */
+
+    nav{
+        padding: 1.25rem 10rem;
+    }
+}
+
+    /* main */
+
+main{
+   /* border: 1px solid var(--green);*/
+    margin: 0 1rem ;  
+}
+
+@media only screen and (min-width: 1024px){/* desktop */
+
+    main{
+        margin: 0 10rem;
+    }
+}
+
+/* about */
+
+.img-wrapper{
+    width: 50%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--dark-grey);
+    max-width: 412px;
+}
+
+.picture{
+    max-width: 100%;
+}
+
+.about-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    position: relative;
+    margin-top: 1.25rem;
+    font-size: 1.5rem;
+}
+
+h1::before{
+    content: "Nice to meet you! \A I'm Jacobo Velasquez.";
+    white-space: pre-line;
+}
+
+h1::after{
+    content: "";
+    height: 0.12rem;
+    width: 10px;
+    background-color: var(--green);
+    position: absolute;
+    bottom: -3px;
+    left: 40px;
+    width: 82%;
+}
+
+.description{
+    text-align: center;
+    margin: 1.25rem 0;
+    font-size: 0.87rem;
+    max-width: 350px;
+    line-height: 1.5;
+}
+
+.contact-1{
+    transition: all 350ms ease-in-out;
+}
+.contact-1:hover{
+    color: var(--green);
+}
+
+@media only screen and (min-width: 480px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h1::after{
+        left: 70px;
+
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    .img-circles{
+        width: 25%;
+    }
+
+    
+    .about{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .img-wrapper{
+        margin: 0;
+        justify-self: flex-end;
+    }
+
+    .about-article{
+        align-self: center;
+    }
+
+    h1{
+        font-size: 3.3rem;
+        align-self: flex-start;
+    }
+
+    h1::before{
+        content: "Nice to \A meet you! I'm \A Jacobo Velásquez.";
+        white-space: pre-line;
+    }
+
+    h1,
+    .description{
+        text-align: left;
+    }
+
+    .description{
+        margin-top: 2.5rem;
+        font-size: 1rem;
+        align-self: flex-start;
+    }
+
+    h1::after{
+        left: 0;
+        width: 97%;
+    }
+
+    .contact-1{
+        align-self: flex-start;
+        margin-top: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+
+
+    h1::before{
+        content: "Nice to meet you! \A I'm Jacobo V.";
+        white-space: pre-line;
+    }
+
+    h1::after{
+        left: 90px;
+        width: 240px;
+    }
+}
+
+@media only screen and (min-width: 1450px){
+
+    h1::before{
+        content: "Nice to meet you! \A I'm Jacobo Velásquez.";
+        white-space: pre-line;
+    }
+
+    h1::after{
+        width: 82%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
