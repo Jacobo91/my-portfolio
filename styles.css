@@ -324,8 +324,13 @@ h1::after{
     align-self: flex-end;
 }
 
+.tech-logo-wrapper{
+    width: 100px;
+    overflow: hidden;
+}
+
 .tech-logo{
-    width: 70px;
+    max-width: 100%;
 }
 
 .percent-wrapper{
