@@ -67,6 +67,10 @@
     border: 1px solid var(--light-grey);
 } 
 
+.divider{
+    border: 1px solid var(--light-grey);
+} 
+
 .img-circles{
     z-index: 100;
     position: absolute;
@@ -299,10 +303,72 @@ h1::after{
 }
 
 
+/* technologies section */
 
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 2rem;
+    padding: 1.25rem 0;
+}
 
+.tech-logo-wrapper{
+    text-align: center;
+    text-transform: uppercase;
+}
 
+.all-logo-wrapper{
+    align-self: flex-end;
+}
 
+.tech-logo{
+    width: 70px;
+}
+
+.percent-wrapper{
+    border: 1px solid var(--light-grey);
+    width: 100px;
+    height: 7px;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+
+.percent-load{
+    background-color: var(--green);
+    height: 6px;
+}
+
+.html-load{
+    width: 80px;
+}
+
+.css-load{
+    width: 70px;
+}
+
+.js-load{
+    width: 65px;
+}
+
+.git-load{
+    width: 80px;
+}
+
+.mocha-load{
+    width: 70px;
+}
+
+.react-load{
+    width: 10px;
+}
+
+.redux-load{
+    width: 1px;
+}
 
 
 
