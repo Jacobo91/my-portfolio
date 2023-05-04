@@ -343,38 +343,7 @@ h1::after{
     overflow: hidden;
 }
 
-.percent-load{
-    background-color: var(--green);
-    height: 6px;
-}
 
-.html-load{
-    width: 80px;
-}
-
-.css-load{
-    width: 70px;
-}
-
-.js-load{
-    width: 65px;
-}
-
-.git-load{
-    width: 80px;
-}
-
-.mocha-load{
-    width: 70px;
-}
-
-.react-load{
-    width: 10px;
-}
-
-.redux-load{
-    width: 1px;
-}
 
 /* projects */
 
@@ -448,8 +417,9 @@ h3{
 footer{
     background-color: var(--dark-grey);
     padding: 0 1.5rem;
-    text-align: center;
+   
 }
+
 
 .contact-section{
     padding-top: 2rem;
@@ -467,57 +437,25 @@ footer{
     line-height: 1.5;
 }
 
-form{
-    text-transform: uppercase;
-    display: grid;
-}
-
-input{
-    color: var(--white);
-    padding: 5px;
-    background-color: transparent;
-    width: 100%;
-    margin: 1rem 0;
-    border-right: none;
-    border-top: none;
-    border-left: none;
-}
-
-textarea{
-    color: var(--white);
-    padding: 5px;
-    width: 100%;
-    background-color: transparent;
-    margin-top: 1rem;
-}
-
-input[type="text"]:focus{
-    border-bottom-color: var(--green);
-    outline: none;
-}
-
-
-input[type="email"]:focus{
-    border-bottom-color: var(--green);
-    outline: none;
-}
-
-input[type="submit"]{
-    text-align: right;
-    margin-bottom: 2rem;
-    width: 130px;
-    justify-self: flex-end;
-    padding: 0 0 10px 0;
-    border-bottom: 2px solid var(--green);
-}
-
-input[type="submit"]:hover{
-cursor: pointer;
-}
 
 .footer-links{
     padding: 1rem 0;
     border-top: 1px solid var(--light-grey);
+}
+
+.whatsapp-btn{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.whatsapp-btn:hover{
+    color: var(--green);
+}
+
+.fa-whatsapp{
+    font-size: 2rem;
+    padding: 10px 5px;
 }
 
 @media only screen and (min-width: 600px){
